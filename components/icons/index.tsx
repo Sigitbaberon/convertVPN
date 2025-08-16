@@ -4,6 +4,22 @@ interface IconProps {
     className?: string;
 }
 
+export const LogoIcon = ({ className = "w-10 h-10" }: IconProps) => (
+    <svg className={className} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style={{stopColor: 'rgb(56, 189, 248)', stopOpacity:1}} />
+                <stop offset="100%" style={{stopColor: 'rgb(34, 211, 238)', stopOpacity:1}} />
+            </linearGradient>
+        </defs>
+        <path d="M50 2 A 48 48 0 0 1 98 50 L 85 50 A 35 35 0 0 0 50 15 Z" fill="url(#logoGradient)"/>
+        <path d="M50 98 A 48 48 0 0 1 2 50 L 15 50 A 35 35 0 0 0 50 85 Z" fill="url(#logoGradient)" />
+        <path d="M 2 50 A 48 48 0 0 1 50 2 L 50 15 A 35 35 0 0 0 15 50 Z" fill="url(#logoGradient)" transform="rotate(180 50 50)"/>
+        <path d="M 98 50 A 48 48 0 0 1 50 98 L 50 85 A 35 35 0 0 0 85 50 Z" fill="url(#logoGradient)" transform="rotate(180 50 50)"/>
+    </svg>
+);
+
+
 export const ConvertIcon = ({ className = "w-5 h-5" }: IconProps) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
     <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.664 0l3.181-3.183m-11.664 0l3.181-3.183A8.25 8.25 0 006.82 6.82l-3.182 3.182" />
@@ -62,5 +78,24 @@ export const XCircleIcon = ({ className = "w-5 h-5" }: IconProps) => (
 export const DocumentTextIcon = ({ className = "w-5 h-5" }: IconProps) => (
     <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+    </svg>
+);
+
+export const QRIcon = ({ className = "w-5 h-5" }: IconProps) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.5a.75.75 0 01.75.75v1.5c0 .414.336.75.75.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75v-1.5a.75.75 0 01-.75-.75V5.25a.75.75 0 01.75-.75zM3.75 18a.75.75 0 01.75.75v1.5c0 .414.336.75.75.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75v-1.5a.75.75 0 01-.75-.75v-1.5a.75.75 0 01.75-.75zm15.75-12a.75.75 0 00-.75.75v1.5c0 .414-.336.75-.75.75h-1.5a.75.75 0 000 1.5h1.5a.75.75 0 00.75-.75v-1.5a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75zm-1.5 12a.75.75 0 01.75.75v1.5c0 .414.336.75.75.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75v-1.5a.75.75 0 01-.75-.75v-1.5a.75.75 0 01.75-.75zm-6-1.5a.75.75 0 00-.75.75v3a.75.75 0 00.75.75h3a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-3zM9 12a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v1.5a.75.75 0 01-.75.75h-1.5a.75.75 0 01-.75-.75v-1.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 4.5h16.5v15H3.75v-15z" />
+    </svg>
+);
+
+export const InspectIcon = ({ className = "w-5 h-5" }: IconProps) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+    </svg>
+);
+
+export const CloseIcon = ({ className = "w-6 h-6" }: IconProps) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
 );
